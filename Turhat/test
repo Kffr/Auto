@@ -1,0 +1,15 @@
+#!/bin/bash
+
+STATUS_MONITOR=$(xset -q | grep "Monitor is" | awk '{print $3}') 
+while [ $STATUS_MONITOR != "Off" ] 
+do 
+echo "On"
+STATUS_MONITOR=$(xset -q | grep "Monitor is" | awk '{print $3}')
+if [ $STATUS_MONITOR != "On" ]; then 
+echo "vittu" 
+fi
+sleep 5
+done
+
+
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "power on" | bluetoothctl -a 
+echo "agent on" | bluetoothctl 
+echo "trust 00:1D:A5:68:98:8A" | bluetoothctl -a 
+echo "connect 00:1D:A5:68:98:8A" | bluetoothctl -a wait
+echo "exit" | bluetoothctl -a
+
